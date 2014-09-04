@@ -23,7 +23,7 @@ if ($_REQUEST["type"] === "Bootstrap") {
 			$json = file_get_contents("Bootstrap-" . $_REQUEST["version"] . ".json");
 			$raw = json_decode($json, true);
 
-			if (isset($raw["hash"]) && isset($raw["size"]) && isset($raw["filename"]) && isset($raw["URL"])) {
+			if (isset($raw["hash"]) && isset($raw["size"]) && isset($raw["filename"]) && isset($raw["url"])) {
 				$response["Exists"] = true;
 				$response["URL"] = $raw["URL"];
 				$response["FileName"] = $raw["filename"];
